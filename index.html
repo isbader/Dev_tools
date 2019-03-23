@@ -11,6 +11,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="style.css" rel="stylesheet">
+	<link href="todo.css" rel="stylesheet">
 	
 </head>
 
@@ -34,7 +35,7 @@
 						<a class="nav-link" href="#">ResumeBuilder</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">ToDoList</a>
+						<a class="nav-link" href="/todo/index.html">ToDoList</a>
 					</li>
 				</ul>
 			</div>
@@ -123,25 +124,132 @@
 				<h3>CSS</h3>
 			</div>
 		</div>
-		<hr class="my-4 padding">
 	</div>
 
-	<!--- Two Column Section -->
+	<figure>
+		<div class="fixed-wrap">
+			<div id="fixed"></div>
+		</div>
+	</figure>
+
+	<!--- The ToDOList -->
 	<div class="container-fluid padding">
 		<div class="row padding">
-			<div class="col-lg-6">
-				<h2>Programming issues</h2>
-				<p>lkasjdflk;asjflkajfkl;jaklfjals;</p>
-				<p>lak;sdfjlkajsflkajsklfjaslkfj;klafj</p>
-				<br>
-				<a href="#" class="btn btn-primary">Learn More</a>
+			<div class="col-12" id="todo_container">
+				<h1 class="display-4">ToDolist</h1>
+				<hr class="todo_hr">
+			</div>
+
+			<div class="container-fluid" id="todo_list_header">
+				<header>
+					<input type="text" placeholder="Enter an activity.." id="todo_item">
+					<button class="btn btn-outline-dark btn-lg" id="todo_add"><i class="fas fa-plus"></i></button>
+				</header>
+			</div>
+			
+			<button class="not_completed btn-outline-dark btn-lg" data-toggle="collapse" data-target="#undone_cards">Not Completed</button>
+				<div id="undone_cards" class="collapse">
+					<div class="container-fluid padding">
+						<div class="row text-center">
+
+							<div class="col-sm-6 col-md-3">
+								<div class="undone card">
+									<div class=" card-body">
+										<h4 class="card-title" id="task">This is a todo list item</h4>
+										<div class="container-fluid" >
+											<button type="button" class="trash btn-outline-light btn-lg" id="trash_button"><i class="fa fa-trash"></i></button>
+											<button type="button" class="check btn-outline-light btn-lg" id="check_button"><i class="fas fa-check"></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+			
+							<div class="col-sm-6 col-md-3">
+									<div class="undone card">
+										<div class=" card-body">
+											<h4 class="card-title" id="task">This is a todo list item</h4>
+											<div class="container-fluid" >
+												<button type="button" class="trash btn-outline-light btn-lg" id="trash_button"><i class="fa fa-trash"></i></button>
+												<button type="button" class="check btn-outline-light btn-lg" id="check_button"><i class="fas fa-check"></i></button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-md-3">
+										<div class="undone card">
+											<div class=" card-body">
+												<h4 class="card-title" id="task">This is a todo list item</h4>
+												<div class="container-fluid" >
+													<button type="button" class="trash btn-outline-light btn-lg" id="trash_button"><i class="fa fa-trash"></i></button>
+													<button type="button" class="check btn-outline-light btn-lg" id="check_button"><i class="fas fa-check"></i></button>
+												</div>
+											</div>
+										</div>
+									</div>
+						</div>
+					</div>
+				</div>
+
+				<button class="completed btn-outline-dark btn-lg" data-toggle="collapse" data-target="#done_cards">Completed</button>
+				<div id="done_cards" class="collapse">
+					<div class="container-fluid padding">
+						<div class="row text-center">
+
+							<div class="col-sm-6 col-md-3">
+								<div class="done card">
+									<div class=" card-body">
+										<h4 class="card-title" id="task">This is a todo list item</h4>
+										<div class="container-fluid" >
+											<button type="button" class="trash btn-outline-light btn-lg" id="trash_button"><i class="fa fa-trash"></i></button>
+											<button type="button" class="check btn-outline-light btn-lg" id="check_button"><i class="fas fa-check"></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-md-3">
+									<div class="done card">
+										<div class=" card-body">
+											<h4 class="card-title" id="task">This is a todo list item</h4>
+											<div class="container-fluid" >
+												<button type="button" class="trash btn-outline-light btn-lg" id="trash_button"><i class="fa fa-trash"></i></button>
+												<button type="button" class="check btn-outline-light btn-lg" id="check_button"><i class="fas fa-check"></i></button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-md-3">
+										<div class="done card">
+											<div class=" card-body">
+												<h4 class="card-title" id="task">This is a todo list item</h4>
+												<div class="container-fluid" >
+													<button type="button" class="trash btn-outline-light btn-lg" id="trash_button"><i class="fa fa-trash"></i></button>
+													<button type="button" class="check btn-outline-light btn-lg" id="check_button"><i class="fas fa-check"></i></button>
+												</div>
+											</div>
+										</div>
+									</div>
+			
+						</div>
+					</div>
+				</div>
+		</div>
+					
+	</div>
+			
+					<!-- JavaScripts -->
+				
+				
+				<!-- <a href="#" class="btn btn-primary">Learn More</a>
 			</div>
 			<div class="col-lg-6">
-				<img src="/resources/code-2620118_960_720.jpg" class="img-fluid">
+				<img src="/resources/code-2620118_960_720.jpg" class="img-fluid"> -->
 			</div>
 		</div>
 	</div>
-	<hr class="my-4">
+	<!-- <hr class="my-4"> -->
 	<!--- Fixed background -->
 	<figure>
 		<div class="fixed-wrap">
@@ -150,28 +258,7 @@
 	</figure>
 
 	<!--- Emoji Section -->
-	<button class="Emoji_button" data-toggle="collapse" data-target="#emoji">click for fun</button>
-	<div id="emoji" class="collapse">
-		<div class="container-fluid padding">
-			<div class="row text-center">
-				<div class="col-sm-6 col-md-3">
-					<img class="gif" src="/resources/gif/panda.gif">
-				</div>
-
-				<div class="col-sm-6 col-md-3">
-					<img class="gif" src="/resources/gif/poo.gif">
-				</div>
-
-				<div class="col-sm-6 col-md-3">
-					<img class="gif" src="/resources/gif/unicorn.gif">
-				</div>
-
-				<div class="col-sm-6 col-md-3">
-					<img class="gif" src="/resources/gif/chicken.gif">
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
 
 	<!--- Meet the team -->
@@ -188,17 +275,16 @@
 	<div class="container-fluid padding">
 		<div class="row padding">
 			<div class="col-md-4">
-				<div class="card" id=>
+				<div class="card">
 					<div class="cnn_card_img">
 						<img class="card-img-top" src="/resources/cnn_cover.png">
 					</div>
 					<div class="card-body">
-						<h4 class="card-title">CNN</h4>
-						<p class="card-text">the text will be here</p>
+						<h4 class="card-title" id="cnn">CNN</h4>
 						<div class="container-fluid" >
 							<button type="button" class="btn btn-outline-dark btn-lg" id="cnn_back">Back</button>
 							<button type="button" class="btn btn-primary btn-lg" id="cnn_view">View</button>
-							<button type="button" class="btn btn-outline-dark btn-lg" id="cnn_next">Next</button>
+							<button type="button" class="btn btn-outline-dark btn-lg" id="cnn_next" >Next</button>
 						</div>
 					</div>
 				</div>
@@ -208,11 +294,11 @@
 				<div class="card" id="cnn_card">
 					<img class="card-img-top" src="/resources/bbc_cover.jpg">
 					<div class="card-body">
-						<h4 class="card-title">BBC</h4>
-						<p class="card-text">the text will be here</p>
+						<h4 class="card-title"id="ign">BBC</h4>
+						<!-- <p class="card-text">the text will be here</p> -->
 						<div class="container-fluid">
 								<button type="button" class="btn btn-outline-dark btn-lg" id="bbc_back">Back</button>
-								<button type="button" class="btn btn-primary btn-lg" id="cnn_view">View</button>
+								<button type="button" class="btn btn-primary btn-lg" id="bbc_view">View</button>
 								<button type="button" class="btn btn-outline-dark btn-lg" id="bbc_next">Next</button>
 						</div>
 					</div>
@@ -223,12 +309,12 @@
 				<div class="card">
 					<img class="card-img-top" src="/resources/IGN_Cover.png">
 					<div class="card-body">
-						<h4 class="card-title">IGN</h4>
-						<p class="card-text">the text will be here</p>
+						<h4 class="card-title"id="ign">IGN</h4>
+						<!-- <p class="card-text">the text will be here</p> -->
 						<div class="container-fluid">
-								<button type="button" class="btn btn-outline-dark btn-lg" id="cnn_back">Back</button>
-								<button type="button" class="btn btn-primary btn-lg" id="cnn_view">View</button>
-								<button type="button" class="btn btn-outline-dark btn-lg" id="cnn_next">Next</button>
+								<button type="button" class="btn btn-outline-dark btn-lg" id="ign_back">Back</button>
+								<button type="button" class="btn btn-primary btn-lg" id="ign_view">View</button>
+								<button type="button" class="btn btn-outline-dark btn-lg" id="ign_next">Next</button>
 						</div>
 					</div>
 				</div>
@@ -252,10 +338,13 @@
 			</div>
 			<div class="col-lg-6" id="article_img"></div>
 		</div>
-			<hr class="my-4">
 	</div>
 
-
+	<figure>
+			<div class="fixed-wrap">
+				<div id="fixed"></div>
+			</div>
+		</figure>
 
 	<!--- Connect -->
 	<div class="container-fluid padding">
@@ -314,6 +403,7 @@ src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 crossorigin="anonymous"></script>
 <script src="/js/news_api.js"></script>
+<script src="/todo.js"></script>
 </body>
 
 </html>
