@@ -16,7 +16,6 @@ html,body{
   font-size: 1.1em !important;
 }
 
-
 .carousel-inner img{
   width: 100%;
   height: 100%;
@@ -104,36 +103,13 @@ html,body{
   font-size:4.5em;
   padding:3rem;
 }
-.fa-facebook{
-  color: #3b5998;
+.fa-github{
+  color: #333;
 }
-.fa-facebook:hover{
-  color: #d5d5d5;
+.fa-github:hover{
+  color: #d3d3d3;
 }
-.fa-twitter{
-  color:#00aced;
-}
-.fa-twitter:hover{
-  color:#d5d5d5;
-}
-.fa-google-plus-g{
-  color: #dd4b39;
-}
-.fa-google-plus-g:hover{
-  color: #d5d5d5;
-}
-.fa-instgram{
-  color:#517fa4;
-}
-.fa-instgram:hover{
-  color:#d5d5d5;
-}
-.fa-youtube{
-  color:#bb0000;
-}
-.fa-youtube:hover{
-  color:#d5d5d5;
-}
+
 footer{
   background-color:#3f3f3f;
   color:#d5d5d5;
@@ -156,17 +132,6 @@ hr.light-100{
    display: none; 
 }
 
-
-
-
-
-
-
-
-
-
-
-/*---Media Queries --*/
 @media (max-width: 992px) {
 
   }
@@ -179,14 +144,8 @@ hr.light-100{
 
 .navbar img{
   height:30px;
-  
-
 }
-/* .container-fluid{
-    width:100%;
-    height:20px;
-} */
-/*---Firefox Bug Fix --*/
+
 .carousel-item {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -194,7 +153,7 @@ hr.light-100{
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
-/*--- Fixed Background Image --*/
+
 figure {
   position: relative;
   width: 100%;
@@ -232,19 +191,3 @@ figure {
 
 
 
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
